@@ -1,7 +1,7 @@
 package com.one.social_project.domain.search.service;
 
 import com.one.social_project.domain.chat.entity.ChatMessage;
-import com.one.social_project.domain.chat.repository.mongo.ChatMessageRepository;
+import com.one.social_project.domain.chat.repository.ChatMessageRepository;
 import com.one.social_project.domain.search.ChatSearchCondition;
 import com.one.social_project.domain.search.UserSearchCondition;
 import com.one.social_project.domain.search.dto.UserSearchDTO;

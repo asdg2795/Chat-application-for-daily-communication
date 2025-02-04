@@ -1,4 +1,4 @@
-package com.one.social_project.domain.chat.repository.mongo;
+package com.one.social_project.domain.chat.repository;
 
 import com.one.social_project.domain.chat.entity.ChatMessage;
 import com.one.social_project.domain.search.repository.ChatMessageRepositoryCustom;

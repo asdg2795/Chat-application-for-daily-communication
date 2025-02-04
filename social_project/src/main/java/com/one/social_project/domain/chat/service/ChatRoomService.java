@@ -7,7 +7,7 @@ import com.one.social_project.domain.chat.constant.ChatRoomType;
 import com.one.social_project.domain.chat.entity.ChatMessage;
 import com.one.social_project.domain.chat.entity.ChatParticipants;
 import com.one.social_project.domain.chat.entity.ChatRoom;
-import com.one.social_project.domain.chat.repository.mongo.ChatMessageRepository;
+import com.one.social_project.domain.chat.repository.ChatMessageRepository;
 import com.one.social_project.domain.chat.repository.ChatParticipantsRepository;
 import com.one.social_project.domain.chat.repository.ChatRoomRepository;
 import com.one.social_project.domain.notifications.service.NotificationService;
@@ -266,6 +266,4 @@ public class ChatRoomService {
                 .role(participants.getChatRole())
                 .build();
     }
-
-
 }

@@ -4,7 +4,7 @@ import com.one.social_project.domain.chat.dto.ReadReceiptDTO;
 import com.one.social_project.domain.chat.entity.ChatMessage;
 import com.one.social_project.domain.chat.entity.ReadReceipt;
 import com.one.social_project.domain.chat.repository.ReadReceiptRepository;
-import com.one.social_project.domain.chat.repository.mongo.ChatMessageRepository;
+import com.one.social_project.domain.chat.repository.ChatMessageRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -51,14 +51,6 @@ public class ReadReceiptService {
         readReceiptRepository.save(readReceipt);
     }
 
-    // 메시지를 읽은 사용자 목록 조회
-    @Transactional(readOnly = true)
-    public List<String> getReadBy(String messageId) {
-        return chatMessageRepository.findById(messageId)
-                .map(ChatMessage::getReaders)
-                .orElseThrow(() -> new EntityNotFoundException("메시지를 찾을 수 없습니다. ID: " + messageId));
-    }
-
     // 특정 채팅방에서 지정된 사용자가 읽지 않은 메시지의 개수를 계산
     @Transactional(readOnly = true)
     public int countUnreadMessages(String roomId, String userId) {
@@ -66,20 +58,5 @@ public class ReadReceiptService {
         return (int) chatMessageRepository.findAllByRoomId(roomId).stream()
                 .filter(message -> !readReceiptRepository.existsByMessageIdAndUserId(message.getId(), userId))
                 .count();
-    }
-
-    // 메시지를 읽은 사용자 목록 DTO 변환
-    @Transactional(readOnly = true)
-    public ReadReceiptDTO getReadStatus(String messageId) {
-        ChatMessage message = chatMessageRepository.findById(messageId)
-                .orElseThrow(() -> new EntityNotFoundException("메시지를 찾을 수 없습니다. ID: " + messageId));
-
-        return ReadReceiptDTO.builder()
-                .roomId(message.getRoomId())
-                .message(message.getMessage())
-                .sender(message.getSender())
-                .readers(message.getReaders())
-                .readAt(message.getCreatedAt())
-                .build();
     }
 }
