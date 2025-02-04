@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @EnableJpaAuditing
-@EnableMongoRepositories(basePackages = "com.one.social_project.domain.chat.repository.mongo")
+@EnableMongoRepositories(basePackages = "com.one.social_project.domain.chat.repository")
 @SpringBootApplication
 public class SocialProjectApplication {
 

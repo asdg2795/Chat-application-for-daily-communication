@@ -151,10 +151,7 @@ public class WebSocketHandler extends TextWebSocketHandler {
         String roomId = chatMessageDTO.getRoomId();
         String nickname = extractNickname(session);
 
-
-        LocalDateTime createdAt = ZonedDateTime.now(ZoneId.of("Asia/Seoul")).toLocalDateTime();
         chatMessageDTO.setSender(nickname); // 닉네임으로 업데이트
-        chatMessageDTO.setCreatedAt(createdAt);
 
         String messageId = chatMessageService.saveMessage(roomId, nickname, chatMessageDTO.getMessage());
         readReceiptService.markAsRead(messageId, nickname);
