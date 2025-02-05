@@ -24,12 +24,14 @@ public class ChatMessageService {
     // 채팅 저장
     public String saveMessage(String roomId, String sender, String message) {
 
+        LocalDateTime createdAt = ZonedDateTime.now(ZoneId.of("Asia/Seoul")).toLocalDateTime();
+
         ChatMessage chatMessage = ChatMessage.builder()
                 .roomId(roomId)
                 .sender(sender)
                 .message(message)
                 .readers(new ArrayList<>(List.of(sender)))
-                .createdAt(LocalDateTime.now())
+                .createdAt(createdAt)
                 .build();
 
         ChatMessage savedMessage = chatMessageRepository.save(chatMessage);

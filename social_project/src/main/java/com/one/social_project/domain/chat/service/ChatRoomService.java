@@ -139,12 +139,14 @@ public class ChatRoomService {
             roomName = user2.getNickname();
         }
 
+        LocalDateTime createdAt = ZonedDateTime.now(ZoneId.of("Asia/Seoul")).toLocalDateTime();
+
         // 새 채팅방 생성
         ChatRoom chatRoom = ChatRoom.builder()
                 .roomId(roomId)
                 .roomName(roomName)
                 .roomType(ChatRoomType.DM)
-                .createdAt(LocalDateTime.now())
+                .createdAt(createdAt)
                 .build();
 
         chatRoomRepository.save(chatRoom);
@@ -175,13 +177,14 @@ public class ChatRoomService {
 
         String roomId = UUID.randomUUID().toString();
 
+        LocalDateTime createdAt = ZonedDateTime.now(ZoneId.of("Asia/Seoul")).toLocalDateTime();
 
         // 새 그룹 채팅방 생성
         ChatRoom chatRoom = ChatRoom.builder()
                 .roomId(roomId)
                 .roomName(roomName)
                 .roomType(ChatRoomType.GM)
-                .createdAt(LocalDateTime.now())
+                .createdAt(createdAt)
                 .build();
 
         chatRoomRepository.save(chatRoom);
