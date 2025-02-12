@@ -38,6 +38,9 @@ out/
 
 
 application-secret.properties
+application-dev.properties
+application-deploy.properties
+application.properties
 
 
 mongodb_data/
