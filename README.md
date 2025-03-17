@@ -57,9 +57,6 @@
 ![nginx](https://img.shields.io/badge/nginx-009639.svg?&style=for-the-badge&logo=nginx&logoColor=white)
 ![gitlabrunner](https://img.shields.io/badge/gitlabrunner-B8DBE4.svg?&style=for-the-badge&logo=gitlabrunner&logoColor=white)
 
-
-
-
 # 커밋 컨벤션
 - **feature(feat)**: 새로운 기능 추가
 - **refactor**: 코드 리팩토링
@@ -83,8 +80,7 @@ https://docs.google.com/spreadsheets/d/1G8_AqPqJMMwJgapfmnYmdf429MRi7Tmjv939TC2c
 ![image](https://github.com/user-attachments/assets/5084ea10-4939-47fd-a1c5-21aa5ea53a4a)
 
 # 트러블 슈팅
-|문제명|해결 방법|
-|-|-|
-|순환참조문제|https://velog.io/@mangez_js/Trouble-Shooting-%EC%88%9C%ED%99%98-%EC%B0%B8%EC%A1%B0-%EB%AC%B8%EC%A0%9C|
-|mongoDB 저장 시 UTC 저장 문제|https://velog.io/@mangez_js/Trouble-Shooting-MongoDB-%EC%A0%80%EC%9E%A5-%EC%8B%9C-%EA%B7%B8%EB%A6%AC%EB%8B%88%EC%B9%98-%ED%91%9C%EC%A4%80%EC%8B%9C%EB%A1%9C-%EC%A0%80%EC%9E%A5%EB%90%98%EB%8A%94-%EC%9D%B4%EC%9C%A0|
-|웹소켓에서 채팅 읽음 기능을 처리해야 하는데, 읽음 처리가 아닌 전송 로직이 실행|https://velog.io/@mangez_js/Trouble-Shooting-%EC%9B%B9%EC%86%8C%EC%BC%93%EC%97%90%EC%84%9C-%EC%B1%84%ED%8C%85-%EC%9D%BD%EC%9D%8C-%EA%B8%B0%EB%8A%A5%EC%9D%84-%EC%B2%98%EB%A6%AC%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EB%8D%B0-%EC%9D%BD%EC%9D%8C-%EC%B2%98%EB%A6%AC%EA%B0%80-%EC%95%84%EB%8B%8C-%EC%A0%84%EC%86%A1-%EB%A1%9C%EC%A7%81%EC%9D%B4-%EC%8B%A4%ED%96%89|
+- [순환참조 문제](https://velog.io/@mangez_js/Trouble-Shooting-%EC%88%9C%ED%99%98-%EC%B0%B8%EC%A1%B0-%EB%AC%B8%EC%A0%9C)
+- [MongoDB 저장 시 UTC 저장 문제](https://velog.io/@mangez_js/Trouble-Shooting-MongoDB-%EC%A0%80%EC%9E%A5-%EC%8B%9C-%EA%B7%B8%EB%A6%AC%EB%8B%88%EC%B9%98-%ED%91%9C%EC%A4%80%EC%8B%9C%EB%A1%9C-%EC%A0%80%EC%9E%A5%EB%90%98%EB%8A%94-%EC%9D%B4%EC%9C%A0)
+- [웹소켓에서 채팅 읽음 기능을 처리해야 하는데, 읽음 처리가 아닌 전송 로직이 실행](https://velog.io/@mangez_js/Trouble-Shooting-%EC%9B%B9%EC%86%8C%EC%BC%93%EC%97%90%EC%84%9C-%EC%B1%84%ED%8C%85-%EC%9D%BD%EC%9D%8C-%EA%B8%B0%EB%8A%A5%EC%9D%84-%EC%B2%98%EB%A6%AC%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EB%8D%B0-%EC%9D%BD%EC%9D%8C-%EC%B2%98%EB%A6%AC%EA%B0%80-%EC%95%84%EB%8B%8C-%EC%A0%84%EC%86%A1-%EB%A1%9C%EC%A7%81%EC%9D%B4-%EC%8B%A4%ED%96%89)
+
